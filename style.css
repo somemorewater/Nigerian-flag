@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:#2e2c39;
+    overflow: hidden;
+}
+
+.cursor {
+    position: absolute;
+    left: 40px;
+    pointer-events: none;
+}
+
+.cursor span {
+    position: absolute;
+    width: 12px;
+    height: 120px;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.cursor span:nth-child(-n+7) {
+    background: green;
+}
+
+.cursor span:nth-child(n+8):nth-child(-n+13) {
+    background: #fff;
+}
+
+.cursor span:nth-child(n+14) {
+    background: green;
+}
+
+.cursor span:nth-child(9){
+    z-index: 1000;
+}
+
+.cursor span:nth-child(9)::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: -55%;
+    width: 60px;
+    height: 60px;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/b/bc/Coat_of_arms_of_Nigeria.svg");
+    background-size: cover;
+}
